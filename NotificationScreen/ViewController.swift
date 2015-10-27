@@ -38,7 +38,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         api.delegate = self
         api.searchYouLocal()
         
-        tableView.frame = CGRectMake(1, 61, 370, 670);
+        tableView.frame = CGRectMake(1, 61, 370, 600);
         tableView.delegate      =   self
         tableView.dataSource    =   self
         tableView.estimatedRowHeight = 200
@@ -103,7 +103,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 if rowData["notificationTypeText"] as? String == "commented on your post" {
                     notificationInfo = "commented your post:"
                     singleImage.image = UIImage(named: "icon-notifications-comment")
-                    cell.message.text = message
+                    cell.message.text = ("\(message) ")
                     cell.message.lineBreakMode = .ByWordWrapping
                     cell.message.numberOfLines = 0
                 }
@@ -133,6 +133,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 
             }
             else {
+                cell.andLabel.text = " "
+                cell.oThersLabel.text = " "
                 
                 if let img = imageCache[urlString] {
                     
