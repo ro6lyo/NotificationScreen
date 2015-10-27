@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NotificationScreen
 //
-//  Created by Paulina Simeonova on 9/29/15.
+//  Created by Mehmed Kadir on 9/30/15.
 //  Copyright © 2015 Mehmed Kadir. All rights reserved.
 //
 
@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         return true
     }
 
