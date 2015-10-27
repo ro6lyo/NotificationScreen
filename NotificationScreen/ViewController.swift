@@ -27,7 +27,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
 
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 60))
-        navigationBar.backgroundColor = UIColor.blueColor()
+        let image =  UIImage(named:"gradient")
+        navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
         navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Lato-Regular", size:30)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         let navigationItem = UINavigationItem()
         navigationItem.title = "Notifications"
